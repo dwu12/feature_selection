@@ -88,7 +88,8 @@ def magic_selection(df_train,
 
 ```bash
     from MagicSelection.feature_selection import magic_selection
-    df_outcome = pd.read_csv('./data/example-data.csv')
+    from MagicSelection.feature_selection import get_example_data
+    df_outcome = get_example_data()
     df_train = df_outcome[df_outcome['group'] == 'A'].drop(columns=['group'])
     df_test = df_outcome[df_outcome['group'] == 'B'].drop(columns=['group'])
     
