@@ -39,6 +39,6 @@ setup(
     classifiers=[],
     license= 'MIT',
     keywords= [],
-    package_data= {},
+    package_data= {'MagicSelection':['data/example-data.csv']},
     entry_points = {} #{'console_scripts':['feature_selection = main']}
 )
