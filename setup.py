@@ -14,7 +14,6 @@ def read(*paths, **kwargs):
         content = open_file.read().strip()
     return content
 
-
 def read_requirements(path):
     return [
         line.strip()
@@ -23,10 +22,10 @@ def read_requirements(path):
     ]
 
 setup(
-    name = 'featureselectiondi',
-    version = "0.0.2", 
+    name = 'MagicSelection',
+    version = "0.0.16", 
     description = 'feature selection method with support for combined features' , 
-    long_description= '',
+    long_description= read('README.md'), ### a readme file 
     long_description_content_type = 'text/markdown',
     author= 'Di Wu',
     author_email= 'wudi1629@gmail.com',
@@ -35,10 +34,10 @@ setup(
     download_url= 'https://github.com/dwu12/feature_selection',
     url = 'https://github.com/dwu12/feature_selection', 
     packages = find_packages(exclude = ['tests','.github']), 
-    install_requires = read_requirements('requirements.txt'), ###['torch', 'numpy']
+    install_requires = read_requirements('requirements.txt'), 
     extras_require = {}, 
     classifiers=[],
-    license= '',
+    license= 'MIT',
     keywords= [],
     package_data= {},
     entry_points = {} #{'console_scripts':['feature_selection = main']}
