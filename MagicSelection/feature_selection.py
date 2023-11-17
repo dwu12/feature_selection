@@ -13,6 +13,11 @@ import matplotlib.pyplot as plt
 from matplotlib.ticker import MultipleLocator,IndexLocator
 import seaborn as sns
 
+import pkg_resources
+
+# Define the path to the file relative to the package
+file_path = pkg_resources.resource_filename('MagicSelection', 'data/example-data.csv')
+
    
 ## Metices
 from sklearn.model_selection import cross_val_score
@@ -631,7 +636,8 @@ def magic_selection(df_train,
     return result_df
     
     
-
-    
+def get_example_data():
+    df = pd.read_csv(file_path)
+    return df
 
 
